@@ -5,6 +5,7 @@ Switch to the directory of the project
 Perform the following :
 
 npm install
+
 node app.js
 
 Open browser and open http://localhost:3000/
