@@ -1,0 +1,51 @@
+<head>
+  <title>Owner Rentee Portal</title>
+  <script
+src="https://code.jquery.com/jquery-1.12.4.js"
+integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+crossorigin="anonymous"></script>
+<script src="/assets/todo-list.js"></script>
+<link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <% include partials/nav.ejs %>
+  <h1>Owner-Rentee Portal</h1>
+  <h2>Welcome to Car Rental Services</h2>
+  <h2>Owner Profile</h2>
+  <p>
+    <div id="todo-table" align="center">
+<span>Welcome : <%= profileData.name %><br></span>
+
+            Email:     <%= profileData.email %><br>
+            Phone:    <%= profileData.mobileno %><br>
+            <div align="center">
+<a href=".\login-owner" class="button" >Logout</a></br></br>
+</div>
+</div>
+<h2>Car Add</h2>
+<div align="center">
+  <h1>Car Details</h1>
+  <form action="/profile-owner" method="post" >
+  <b>Type:<b/><br/>
+  <input type="text" name="type" placeholder="Enter type of Car"><br/>
+  <b>No. of Seats:</b><br/>
+  <input type="number" name="area" placeholder="Enter No. of Seats in the Car" ><br/>
+  <b>Address:</b><br/>
+  <input type="text" name="address" placeholder="Enter Address" ><br/>
+  <b>Owner Name:</b><br/>
+  <input type="text" name="ownName" placeholder="Enter Enter Owner Name" ><br/>
+  <b>Satus:</b><br/>
+  <input type="boolean" name="status" placeholder="1 for sold 2 for not" ><br/><br/>
+  <b>Contact:</b><br/>
+  <input type="number" name="number" placeholder="Contact No." ><br/><br/>
+  <b>Rent:</b><br/>
+  <input type="number" name="rent" placeholder="Rent" ><br/><br/><b>
+  Security Deposit:</b><br/>
+  <input type="number" name="security" placeholder="Ammount has to be paid" ><br/><br/>
+  <b>Features:</b><br/>
+  <input type="text" name="features" placeholder="Explain the features" ><br/><br/>
+<button class="w3-btn w3-blue" id="SignupFormProp">Add Car</button></p>
+  <!-- <input type="submit" value="Sign Up"><br/> -->
+  </form>
+</body>
+</html>

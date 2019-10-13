@@ -1,0 +1,33 @@
+<head>
+  <title>Owner Rentee Portal</title>
+  <script
+src="https://code.jquery.com/jquery-1.12.4.js"
+integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+crossorigin="anonymous"></script>
+<script src="/assets/todo-list.js"></script>
+<link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <% include partials/nav.ejs %>
+  <h1>Owner-Rentee Portal</h1>
+  <h2>Welcome to Car Rental Services</h2>
+  <p>
+    <div id="todo-table" align="center">
+<span>Welcome : <%= profileData.name %><br></span>
+
+            Email:     <%= profileData.email %><br>
+            Phone:    <%= profileData.mobileno %><br>
+            <div align="center">
+<a href=".\login-rentee" class="button" >Logout</a>
+</div>
+</div>
+<h2> To view Properties click below </h2>
+<form action=".\cars" method="post" >
+  <input type="radio" name="type" value="Resedential" checked> Family<br>
+  <input type="radio" name="type" value="Commercial"> Group<br>
+  <!-- <input type="radio" name="gender" value="other"> Other -->
+  <button class="w3-btn w3-blue" id="SelectType">Selecty Type of Car</button>
+</form>
+<p>
+</body>
+</html>
